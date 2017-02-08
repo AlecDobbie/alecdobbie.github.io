@@ -1,0 +1,6 @@
+3.4 p per message 10k a month
+2.8p per message 50k a month
+2.4p per message 200k a month.
+
+
+hlr lookup

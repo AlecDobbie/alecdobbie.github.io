@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://trinket.io/embed/python/9339862606?outputOnly=true&start=result -->
+<html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths desktop landscape windows windows10 windows10_0 64bit chrome chrome56 chrome56_0 webkit en-gb flash mixblendmode"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Trinket: run code anywhere</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="https://trinket.io/img/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://trinket.io/cache-prefix-06a575f3/img/icons/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://trinket.io/cache-prefix-06a575f3/img/icons/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://trinket.io/cache-prefix-06a575f3/img/icons/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="https://trinket.io/cache-prefix-06a575f3/img/icons/apple-touch-icon-precomposed.png">
+  <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./font-mfizz.css">
+  <link rel="stylesheet" type="text/css" href="./embed.css">
+  
+<link rel="stylesheet" type="text/css" href="./rangeslider.min.css">
+<link rel="stylesheet" type="text/css" href="./weather-icons.min.css">
+
+
+  <script async="" src="./fbds.js.download"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+    trinket = {
+      config : {
+        apphostname    : 'trinket.io',
+        usersubdomains : true,
+        protocol       : 'https',
+        addthisurl     : '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5344021135dae100',
+        cachePrefix    : 'cache-prefix-',
+        prefixes       : {"components":"cache-prefix-a38050dc","js":"cache-prefix-06a575f3","css":"cache-prefix-06a575f3","img":"cache-prefix-06a575f3","fonts":"cache-prefix-06a575f3","partials":"cache-prefix-06a575f3","skulpt":"6a586c1d","pypyjs":"cache-prefix-e8e5bcf1"},
+        broadcastHostname: 'broadcastapp.trinket.io',
+        broadcastPort: '',
+        broadcastProtocol: 'https',
+        python3_api    : 'https://python3-5.trinket.io',
+        java_api       : 'https://java8.trinket.io'
+      }
+    };
+  </script><style type="text/css">
+:root .addthis_toolbox
+{ display: none !important; }</style>
+
+  <script src="./jquery.min.js(1).download" type="text/javascript"></script>
+
+  <script src="./modernizr.min.js.download" type="text/javascript"></script>
+  <script src="./detectizr.min.js.download" type="text/javascript"></script>
+  <script src="./md5.js.download" type="text/javascript"></script>
+  <script src="./sha1.js.download" type="text/javascript"></script>
+  <script src="./aes.js.download" type="text/javascript"></script>
+
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/js/vendor/jQuery.XDomainRequest.js"></script>
+  <![endif]-->
+
+  
+  
+  
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    (function() {
+      ga('create', 'UA-46899028-1', 'trinket.io');
+      ga('send', 'pageview');
+    })();
+  </script>
+  
+  
+  
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1441353372787187']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1441353372787187&amp;amp;ev=NoScript" /&gt;</noscript>
+  
+
+<meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style></head>
+
+<body id="embed_content_python" data-no-metrics="false" class="mode-output" data-is-mobile="false" marginwidth="0" marginheight="0">
+
+  <input id="user" type="hidden" value="">
+  
+  <script>
+    trinketObject = {"id":"56d93de1c46f1a303f01cab8","code":"[{&quot;name&quot;:&quot;main.py&quot;,&quot;content&quot;:&quot;#!/bin/python3\\n\\nfrom turtle import *\\nfrom random import randint\\n\\nspeed(0)\\npenup()\\ngoto(-140, 140)\\n\\nfor step in range(15):\\n  write(step, align=&#39;center&#39;)\\n  right(90)\\n  for num in range(8):\\n    penup()\\n    forward(10)\\n    pendown()\\n    forward(10)\\n  penup()\\n  backward(160)\\n  left(90)\\n  forward(20)\\n\\nada = Turtle()\\nada.color(&#39;red&#39;)\\nada.shape(&#39;turtle&#39;)\\n\\nada.penup()\\nada.goto(-160, 100)\\nada.pendown()\\n\\nfor turn in range(10):\\n  ada.right(36)\\n\\nbob = Turtle()\\nbob.color(&#39;blue&#39;)\\nbob.shape(&#39;turtle&#39;)\\n\\nbob.penup()\\nbob.goto(-160, 70)\\nbob.pendown()\\n\\nfor turn in range(72):\\n  bob.left(5)\\n\\nivy = Turtle()\\nivy.shape(&#39;turtle&#39;)\\nivy.color(&#39;green&#39;)\\n\\nivy.penup()\\nivy.goto(-160, 40)\\nivy.pendown()\\n\\nfor turn in range(60):\\n  ivy.right(6)\\n\\njim = Turtle()\\njim.shape(&#39;turtle&#39;)\\njim.color(&#39;orange&#39;)\\n\\njim.penup()\\njim.goto(-160, 10)\\njim.pendown()\\n\\nfor turn in range(30):\\n  jim.left(12)\\n\\nfor turn in range(100):\\n  ada.forward(randint(1,5))\\n  bob.forward(randint(1,5))\\n  ivy.forward(randint(1,5))\\n  jim.forward(randint(1,5))\\n  &quot;}]","lang":"python","name":"Turtle Race Finished","description":null,"groupId":null,"_parent":"56d04eefb21ef2397a45f4b2","_origin_id":null,"_owner":"539563867d907a6829d18be3","hash":"0afa233fd5b115a7dfc9d4d7f9501e66c8ee1056","shortCode":"9339862606","lastUpdated":"2016-09-30T08:29:51.604Z","metrics":{"embedShares":1,"emailShares":2,"linkShares":5,"linkViews":1188,"runs":11015,"embedViews":10686,"forks":26},"lastView":{"viewType":"embedViews","viewedOn":"2017-02-07T18:41:22.679Z","referer":"https://codeclubprojects.org/en-GB/python/turtle-race/","address":"94.173.124.123"},"snapshot":"https://trinket-snapshots.trinket.io/9339862606-1475224191608.png","assets":[],"displayOnly":null,"original":null,"settings":{"testsEnabled":false}};
+  </script>
+  <input id="shareType" type="hidden" value="python">
+  <input id="proxy" type="hidden" value="https://trinket.io/proxy">
+
+  <div id="wrapper" class="off-canvas-wrap owner-view row" data-offcanvas="">
+    <div class="trinket-wrapper inner-wrap">
+      <nav id="menu" class="trinket-header" data-interface="top-menu">
+        <section class="left title-bar">
+          <span title="hosted by trinket.io" data-dropdown="brand-menu" aria-controls="brand-menu" aria-expanded="false">
+            <img src="./trinket-logo.png">
+          </span>
+          <ul id="brand-menu" class="f-dropdown" data-dropdown-content="" aria-hidden="true" tabindex="-1">
+            <li><a href="https://trinket.io/">About</a></li>
+            <li><a href="https://trinket.io/signup">Sign Up</a></li>
+          </ul>
+        </section>
+        <section class="mode-toolbar left" data-mode="interact">
+          <div class="icon-bar label-right">
+            
+            <a class="run-it menu-button item allow-original" data-action="code.run" title="View the result.">
+              <i class="fa fa-play"></i>
+              <label>Run</label>
+            </a>
+            <a class="check-it menu-button item allow-original hide" data-action="code.check" title="Check your code.">
+              <i class="fa fa-check-circle"></i>
+              <label class="show-for-medium-up">Check</label>
+            </a>
+            
+          </div>
+        </section>
+      </nav>
+
+      <section class="trinket-content main-section" data-interface="content">
+        <div id="flashMessage" class="container hide">
+          <div id="flashContent"></div>
+        </div>
+        <div class="trinket-content-wrapper">
+          <div id="content-overlay" class="hide" data-interface="overlay"></div>
+          
+  <input id="honeypot" type="text" tabindex="-1">
+  <input id="start-value" type="hidden" value="result">
+  <div id="imageAssets"></div>
+  <div id="modules" class="hide" data-interface="overlay">
+    <a class="menu-button closer" data-action="code.modules" data-data="close"><i class="fa fa-times-circle-o"></i></a>
+  </div>
+  <div id="editor" class="code-editor hide tabless with-info" data-interface="editor"><div class="code-editor" data-interface="code-editor"><div class="tab-nav allow-assets"><dl class="left-options"><dd class="tab-button"><a class="tab-scroll-link left-arrow" data-direction="-1"><i class="fa fa-chevron-left"></i></a></dd><dd class="tab-button"><a class="tab-scroll-link right-arrow" data-direction="1"><i class="fa fa-chevron-right"></i></a></dd></dl><dl class="scrollable-content"><dd class="tab permanent active"><a class="file-tab-link"><span class="file-name">main.py</span><span class="tab-options-link menu-button" data-action="file.options"></span></a></dd></dl><dl class="right-options"><dd class="tab-button"><a class="add-file-link menu-button" data-action="file.add"><i class="fa fa-plus"></i></a></dd><dd class="tab"><a class="file-tab-link add-asset-link" data-action="assets.view" title="View and Add Images"><i class="fa fa-file-image-o"></i></a></dd></dl><div class="clearfix"></div></div><div class="file-content-container"><div class="file-content active"></div><div class="file-content fixed-right"><div class="asset-viewer">
+  <div id="asset-viewer-contents" class="contents">
+    <div class="clearfix">
+      <p class="broadcasting-assets-info alert-box warning">
+        Adding or removing images is disabled during broadcasting. You'll be able to update images again once the broadcast session is over.
+      </p>
+    </div>
+
+    <div class="clearfix">
+      <h4 class="left">Images</h4>
+      <a class="button small right" events="click:view.addimage.show"><i class="fa fa-plus"></i> Add Image</a>
+    </div>
+    <p>Images listed here are available to use in your code in this trinket. Click the Add Image button to include more or upload new images.</p>
+
+    <!-- <a class="button small" events="click:view.add-link.show"><i class="fa fa-link">Link</i></a> -->
+
+    <div id="asset-list-wrapper">
+      <div class="howto-container hide" style="display: block;">
+        <dl class="accordion" data-accordion="">
+          <dd class="accordion-navigation">
+            <a href="https://trinket.io/embed/python/9339862606?outputOnly=true&amp;start=result#howto"><i class="fa fa-question-circle"></i> How To Use Images</a>
+            <div id="howto" class="howto-message content">
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <ul id="trinket-asset-list" class="list-view asset-list" style="display: none;">
+        
+      </ul>
+    </div>
+  </div>
+
+  
+
+  <!--
+  <div class="template overlay" template-id="imageLink">
+    <input type="text" placeholder="paste image url here">
+    <input type="text" placeholder="image name">
+    <input type="button" name="add">
+    <a class="closer"><i class="fa fa-times-circle-o"></i></a>
+  </div>
+  -->
+</div></div></div><div class="info-area collapsed"><div class="info-quick"></div><div class="scroll-wrap"><div class="info-full"></div></div><a class="expander fa"></a></div></div></div>
+  
+  <div id="codeOutput" class="codeOutput" data-interface="output">
+    <div id="graphic-wrap" class="hide">
+      <div id="graphic"></div><div class="turtle-overlay hide" data-action="graphic.focus" data-interface="output"></div>
+  </div>
+  <div id="output-dragbar" class="hide" data-action="resize"></div>
+    <div id="console-wrap" class="hide">
+      <div id="console-output"></div>
+    </div>
+  </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="content-overlay" class="hide"></div>
+
+  <!-- the response-indicator divs allow javascript to determine which responsive size is being applied -->
+  <div class="responsive-indicator show-for-small-only" data-size="small"></div>
+  <div class="responsive-indicator show-for-medium-only" data-size="medium"></div>
+  <div class="responsive-indicator show-for-large-up" data-size="large"></div>
+  <script id="statusMessageTemplate" type="text/html">
+    <div id="statusMessages" data-inteface="alert" data-alert class="alert-box {{type}}">
+      <div "alert-message">{{message}}</div>
+      <a href="#" class="close">&times;</a>
+    </div>
+  </script>
+  <script src="./localStorage.min.js.download" type="text/javacript"></script>
+  <script src="./lodash.min.js.download" type="text/javascript"></script>
+  <script src="./moment.min.js.download" type="text/javascript"></script>
+  
+  
+  <script type="text/javascript" src="./rangeslider.min.js.download"></script>
+  
+  <script type="text/javascript" src="./6a586c1d-skulpt.min.js.download"></script>
+  <script type="text/javascript" src="./6a586c1d-skulpt-stdlib.js.download"></script>
+  
+  
+  <script src="./embed-python-output-79fb3fa2.js.download" type="text/javascript"></script>
+
+  
+  
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 970987464;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<div style="display:none">
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</div>
+</script>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/970987464/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+  
+
+  
+  
+<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
+    
+      
+  
+<script type="text/javascript">
+twttr.conversion.trackPid('l4kgy', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4kgy&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" /&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4kgy&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" /&gt;</noscript>
+  
+
+    
+    
+  
+
+
+
+
+</div><div class="tab-options"><ul><li><a class="file-remove-link menu-button" data-action="file.remove"><i class="fa fa-trash"></i></a></li><li><a class="file-rename-link menu-button" data-action="file.rename"><i class="fa fa-pencil"></i></a></li></ul></div><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script></body></html>

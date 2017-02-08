@@ -1,0 +1,50 @@
+$(function() {
+  // render scratchblocks
+  scratchblocks2.parse('pre.blocks code, pre.scratch code');
+});
+
+$(document).ready(function($) {
+  // make checkboxes clickable
+  $('.lesson-steps li').click(function() {
+    $(this).toggleClass('activity-done');
+  });
+
+  // if project is a sample / protected
+  if ($('.js-protected').length) {
+    if (Cookies.get('https://codeclubprojects.org') != undefined ) {
+        $('.js-auth').addClass('hide');
+        $('.js-protected').removeClass('hide');
+    } else {
+      $firstSection = $('.level1')[0];
+      $('.js-auth').detach().appendTo($firstSection).removeClass('hide');
+      $('.level1').slice(1).addClass('js-protected hide');
+
+      $('.js-auth-form').on('submit', function(e) {
+        e.preventDefault();
+        var self = $(this);
+        var values = self.serializeArray();
+        var club_id = values[0]['value'];
+        var pin = values[1]['value'];
+        var type = club_id.length === 4 ? 'users':'clubs'; // bit hacky, but user IDs are currently just 4 chars
+
+        self.find('.error').remove();
+        self.append('<img class="js-loading" src="/public/images/icons/loading.svg">');
+
+        $.ajax({
+          url: '/club-id/validate/?club_id='+club_id+'&club_pin='+pin,
+          type: 'POST',
+        })
+        .done( function() {
+          $('.js-auth').addClass('hide');
+          $('.js-protected').removeClass('hide');
+        })
+        .error(function(jqXHR, textStatus, errorThrown) {
+          self.append('<div class="error"><span>Invalid Club ID and PIN</span></div>')
+        })
+        .always(function() {
+          self.find('.js-loading').remove();
+        });
+      });
+    }
+  }
+});

@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0054)https://codeclubprojects.org/en-GB/python/turtle-race/ -->
+<html lang="en" class="wf-museosansrounded-n3-active wf-museosansrounded-n7-active wf-museosansrounded-n1-active wf-active gr__codeclubprojects_org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turtle Race! – Code Club</title>
+    <link type="text/css" rel="stylesheet" href="./Turtle Race! – Code Club_files/main.css">
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/GB7MdjLTXXfbvZR32aYbY90xPh0iz4jd/analytics.min.js"></script>
+    <script src="./Turtle Race! – Code Club_files/rmx3lvs.js.download"></script>
+    <style type="text/css">
+        .tk-museo-sans-rounded {
+            font-family: "museo-sans-rounded",sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-family: museo-sans-rounded;
+            src: url(https://use.typekit.net/af/5d6613/00000000000000000000f305/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff2"),url(https://use.typekit.net/af/5d6613/00000000000000000000f305/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff"),url(https://use.typekit.net/af/5d6613/00000000000000000000f305/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("opentype");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: museo-sans-rounded;
+            src: url(https://use.typekit.net/af/6db433/00000000000000000000f306/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff2"),url(https://use.typekit.net/af/6db433/00000000000000000000f306/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff"),url(https://use.typekit.net/af/6db433/00000000000000000000f306/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("opentype");
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: museo-sans-rounded;
+            src: url(https://use.typekit.net/af/486048/00000000000000000000f307/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff2"),url(https://use.typekit.net/af/486048/00000000000000000000f307/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("woff"),url(https://use.typekit.net/af/486048/00000000000000000000f307/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&token=9E14t28kveAVwTrOZi5A7ymP28CvrIgAEVHpLvAv4Q9cyZW5KKc6FERXV4E1cK%2FVPOSRPbRAf8HtWRYwSTXDoPQ13ScqFBX3WFWQ5p3MNvO8CArYy%2F%2FFkCLe%2BzZBkaafK5lsjR9qhcmW42VAfyviwbvEXOah9ye3JeuOkjFPZLI0jLSlRWaS%2BcjWOai2pQleouKtwuRXA%2F2rWDM47eeP35wk4JJFYW%2BUCkMJ48HwLhuA6bZyPLj2ak8uiFGwwg0bjFkRySSmQhwBFMHuOn%2BP8lvgzPwCSo9vlsEfxK%2BVbXOeiib81n98zZqj5ZvTeLfb0yZyiHEbjYIRGDk6rjk8nmcAl%2F5Jh8jUU3z7deBCcSc%3D) format("opentype");
+            font-weight: 100;
+            font-style: normal;
+        }
+    </style>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+    <link rel="shortcut icon" sizes="16x16 32x32 128x128" href="https://codeclubprojects.org/public/images/favicon.ico">
+    <script type="text/javascript">
+        !function () {
+            var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+                analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "group", "track", "ready", "alias", "page", "once", "off", "on", "timeout"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t) { var e = document.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) }; analytics.SNIPPET_VERSION = "3.0.1";
+
+
+                analytics.load("GB7MdjLTXXfbvZR32aYbY90xPh0iz4jd");
+
+
+            }
+        }();
+    </script>
+</head>
+<body data-gr-c-s-loaded="true">
+    <nav class="navbar pdf-hidden">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="btn btn-secondary">Menu </span>
+                </button>
+                <a id="nav-icon" class="navbar-brand" href="https://codeclubprojects.org/en-GB/"><img src="./Turtle Race! – Code Club_files/logo.svg" height="60px" width="60px"></a>
+            </div>
+            <script type="text/javascript">
+                var link = document.getElementById('nav-icon');
+
+                analytics.trackLink(link, 'Clicked Logo in Primary Nav');
+            </script>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="nav-courses" href="https://codeclubprojects.org/en-GB/">Courses</a>
+                    </li>
+                    <li>
+                        <a id="nav-curriculum" href="https://codeclubprojects.org/en-GB/curriculum/">Curriculum</a>
+                    </li>
+                    <li>
+                        <a id="nav-resources" href="https://codeclubprojects.org/en-GB/resources/">Resources</a>
+                    </li>
+                    <li>
+                        <a id="nav-contribute" href="https://codeclubprojects.org/en-GB/contribute/">Contribute</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <meta property="og:title" content="Turtle Race!">
+    <meta property="article:author" content="Code Club">
+    <meta property="article:section" content="python">
+    <meta property="article:tag" content="python">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Code Club Projects Site">
+    <meta property="og:image" content="https://codeclubprojects.org//en-GB/python/turtle-race/small_banner.png">
+    <meta property="og:description" content="Race turtles against eachother!">
+    <meta property="og:url" content="https://codeclubprojects.org//en-GB/python/turtle-race/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CodeClub">
+    <meta name="codeclub:project-type" content="project">
+
+
+    <section>
+
+        <header class="lesson" style="background: url(/en-GB/python/large_banner.png); background-repeat: repeat !important;">
+
+            <div class="container">
+
+                <a id="back-to-modules" class="pull-left pdf-hidden" href="https://codeclubprojects.org/en-GB/python/">
+                    <div class="icon-arrow-left">
+                    </div>
+                    Projects
+                </a>
+                <script type="text/javascript">
+                    var link = document.getElementById('back-to-modules');
+
+                    analytics.trackLink(link, 'Clicked on back Modules');
+                </script>
+
+            </div>
+            <div class="container">
+                <h1>Turtle Race!</h1>
+                <div class="pdf_logo">
+                    <img src="./Turtle Race! – Code Club_files/logo.svg">
+                </div>
+
+                <div class="js-protected">
+
+
+
+                    <a id="pdf-cta" class="pdf-hidden btn btn-lesson" href="https://codeclubprojects.org/en-GB/python/turtle-race/download/protected/turtle-race.pdf" download="" target="_blank">
+                        <div class="icon-document-white">
+                        </div>
+                        PDF version
+                    </a>
+
+
+                    <script type="text/javascript">
+                        var link = document.getElementById('pdf-cta');
+
+                        analytics.trackLink(link, 'Clicked on PDF Version',
+                          {
+                              project: 'turtle-race'
+                          });
+                    </script>
+                    <a id="materials-cta" class="pdf-hidden btn btn-lesson" href="https://codeclubprojects.org/en-GB/python/turtle-race/materials.html">
+                        <div class="icon-download-white">
+                        </div>
+                        Project Materials
+                    </a>
+                    <script type="text/javascript">
+                        var link = document.getElementById('materials-cta');
+
+                        analytics.trackLink(link, 'Clicked on Materials',
+                          {
+                              project: 'turtle-race'
+                          });
+                    </script>
+
+                    <a id="notes-cta" class="pdf-hidden btn btn-lesson" href="https://codeclubprojects.org/en-GB/python/turtle-race/Turtle%20Race%20-%20notes.html">
+                        <div class="icon-document-copy-white">
+                        </div>
+                        Volunteer Notes
+                    </a>
+                    <script type="text/javascript">
+                        var link = document.getElementById('notes-cta');
+
+                        analytics.trackLink(link, 'Clicked on Notes',
+                          {
+                              project: 'turtle-race'
+                          });
+                    </script>
+
+                </div>
+            </div>
+        </header>
+    </section>
+    <section>
+        <div class="container pdf-background">
+            <article>
+                <main class="lesson-steps center-block" role="main">
+
+                    <section id="introduction" class="level1 intro">
+                        <h1>Introduction</h1>
+                        <p>In this project you will use loops to create a racing turtle game and draw a race track.</p>
+                        <div class="trinket">
+                            <p><iframe src="./Turtle Race! – Code Club_files/9339862606.html" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""> </iframe> <img src="./Turtle Race! – Code Club_files/race-finished.png"></p>
+                        </div>
+                    </section>
+
+                    <h1>Step 1: Race track</h1>
+                    <p>You’re going to create a game with racing turtles. First they’ll need a race track.</p>
+
+                    <section class="primaryCol">
+                        <h2>Activity Checklist</h2>
+                        <ul>
+                            <li class="activity-done">Open the blank Python template Trinket: <a href="http://jumpto.cc/python-new" target="_blank">jumpto.cc/python-new</a>. If you’re reading this online, you can also use the embedded version of this trinket below.</li>
+                        </ul>
+                        <div class="trinket">
+                            <iframe src="./Turtle Race! – Code Club_files/33e5c3b81b.html" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+                        </div>
+                    </section>
+                    <section class="secondaryCol">
+                        <ul>
+                            <li>Add the following code to draw a line using the ‘turtle’:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-forward.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Now let’s use the turtle to draw some track markings for the race.</li>
+                        </ul>
+                        <p>
+                            The turtle <code>write</code> function writes text to the screen.
+                        </p>
+                        <p>Try it:</p>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-markings1.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Now you need to fill in the numbers in between to create markings:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-markings2.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Did you notice that your code is very repetitive? The only thing that changes is the number to write.</li>
+                        </ul>
+                        <p>
+                            There’s a better way of doing this in Python. You can use a <code>for</code> loop.
+                        </p>
+                        <p>
+                            Update your code to use a <code>for</code> loop:
+                        </p>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-for.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Hmm, that only prints numbers up to 4. In Python <code>range(5)</code> returns five numbers, from 0 up to 4. To get it to also return 5 you’ll need to use <code>range(6)</code>:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-range.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Now we can draw some track markings. The turtle starts at coordinates (0,0) in the middle of the screen.</li>
+                        </ul>
+                        <p>Move the turtle to the top left instead:</p>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-goto.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Ah, you’ll want to lift the pen up first!</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-penup.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>Instead of drawing a line horizontally, let’s draw vertical lines to create a track:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-lines.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>It looks neater if you centre the numbers:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-center.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <ul>
+                            <li>And you can speed up the turtle so it draws faster:</li>
+                        </ul>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-speed.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <h2>Save Your Project</h2>
+                        <h2>Challenge: More lines</h2>
+                        <p>Can you change your code so that the track lines go right across the screen?</p>
+                        <figure>
+                            <img src="./Turtle Race! – Code Club_files/race-challenge1.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                        </figure>
+                        <p>If you want to make the turtle go even faster you can use <code>speed(0)</code>.
+                        </p>
+                        <section id="step-2-racing-turtles" class="level1 activity">
+                            <h>Step 2: Racing turtles</h>
+                            <p>Now for the fun bit. Let’s add some racing turtles. It would be really boring if the turtles did the same thing every time so they will move a random number of steps each turn. The winner is the turtle that gets the furthest in 100 turns.</p>
+                            <section id="activity-checklist-1" class="level2 check">
+                                <h2>Activity Checklist</h2>
+                                <ul>
+                                    <li>When you use commands like <code>forward(20)</code> you are using a single turtle. But you can create more turtles. Add the following code to the end of your script (but make sure it’s not indented):</li>
+                                </ul>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-red.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <p>The first line creates a turtle called ‘ada’. The next lines set the colour and shape of the turtle. Now it really looks like a turtle!</p>
+                                <ul>
+                                    <li>Let’s send the turtle to the starting line:</li>
+                                </ul>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-start.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <ul>
+                                    <li>Now you need to make the turtle race by moving a random number of steps at a time. You’ll need the <code>randint</code> function from the Python <code>random</code> library. Add this <code>import</code> line to the top of your script:</li>
+                                </ul>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-randint.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <ul>
+                                    <li>The <code>randint</code> function returns a random integer (whole number) between the values chosen. The turtle will move forward 1, 2, 3, 4, or 5 steps at each turn.</li>
+                                </ul>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-random.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <ul>
+                                    <li>One turtle isn’t much of a race! Let’s add another one:</li>
+                                </ul>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-blue.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <p>Note that the code for moving the blue turtle needs to be in <strong>the same</strong> <code>for</code> loop as the code for moving the red turtle so that they each make a move every turn.</p>
+                            </section>
+                            <section id="save-your-project-1" class="level2 save">
+                                <h2>Save Your Project</h2>
+                            </section>
+                            <section id="challenge-race-time" class="level2 challenge">
+                                <h2>Challenge: Race time!</h2>
+                                <p>Now you’re ready to race. Pick a turtle and an opponent and see who wins.</p>
+                                <p>Can you add more turtles so you can race with more friends?</p>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-more.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <p>Colours include: orange, purple, violet, tomato, turquoise, magenta and brown - or you can go to <a href="http://jumpto.cc/colours">jumpto.cc/colours</a> and pick any colour you like!</p>
+                            </section>
+                            <section id="save-your-project-2" class="level2 save">
+                                <h2>Save Your Project</h2>
+                            </section>
+                            <section id="challenge-do-a-twirl" class="level2 challenge">
+                                <h2>Challenge: Do a twirl</h2>
+                                <p>Can you use a <code>for turn in range():</code> loop to make each turtle do a 360 degree twirl after they get to the starting line? You’ll need to make sure they are facing in the right direction at the start of the race!</p>
+                                <p><code>ada.right(36)</code> will turn the red turtle right by 36 degrees.</p>
+                                <p><strong>Hint:</strong> A full turn is 360 degrees. A turtle could turn right 10 degrees 36 times, or left 5 degrees 72 times, or any other numbers make 360!</p>
+                            </section>
+                            <section id="challenge-dashed-lines" class="level2 challenge">
+                                <h2>Challenge: Dashed lines</h2>
+                                <p>Can you use a loop to make the track lines dashed instead of solid?</p>
+                                <figure>
+                                    <img src="./Turtle Race! – Code Club_files/race-finished.png" alt="screenshot"><figcaption>screenshot</figcaption>
+                                </figure>
+                                <p><strong>Hint:</strong> Find the code that draws a straight line. Try using:<code>for</code>, <code>forward()</code>, <code>penup()</code> and <code>pendown()</code></p>
+                            </section>
+                            <section id="save-your-project-3" class="level2 save">
+                                <h2>Save Your Project</h2>
+                            </section>
+                        </section>
+                    </section>
+                  
+                    
+                </main>
+            </article>
+        </div>
+    </section>
+
+    <div class="center-block auth js-auth hide">
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <p>To access the rest of this project  you'll need to be part of a registered Code Club. For more details on what this means, <a href="https://codeclubprojects.org/en-GB/club-id/">click here.</a></p>
+        </div>
+        <div class="panel panel-club-id extra-margin-2">
+            <div class="panel-body">
+                <h3 class="text-center">Please enter your Club ID &amp; PIN</h3>
+                <form class="js-auth-form form-signin">
+                    <input class="form-control" type="text" id="club-id" name="club-id" placeholder="Club ID" value="">
+                    <input class="form-control" type="text" id="club-pin" name="club-pin" placeholder="Club PIN" value="">
+                    <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Submit">
+                </form>
+            </div>
+            <div class="panel-footer">
+                <a href="https://codeclubprojects.org/en-GB/club-id/">I don't have a Club ID</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="cta-3 pdf-hidden">
+            <div class="container">
+                <h1 class="text-center">Give us some feedback</h1>
+                <p>If you’ve completed this project, please help us by completing this short questionnaire to let us know how it went.</p>
+                <div class="extra-top-padding-2 extra-bottom-padding-1">
+                    <a class="btn btn-big center-block" id="feedback-cta" href="https://docs.google.com/a/codeclub.org.uk/forms/d/1EweFTEiUAHWYdc0rSm6uE28PxpYmv4JBifRrr5cjEw0/viewform?entry.1331148076=python&amp;entry.2100470438=turtle-race" target="_blank">Give Feedback</a>
+                    <script type="text/javascript">
+                        var link = document.getElementById('feedback-cta');
+
+                        analytics.trackLink(link, 'Clicked on Give Feedback CTA');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer pdf-hidden">
+        <div class="container">
+            <div class="footer-nav">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a id="nav-courses" href="https://codeclubprojects.org/en-GB/">Courses</a>
+                    </li>
+                    <li>
+                        <a id="nav-curriculum" href="https://codeclubprojects.org/en-GB/curriculum/">Curriculum</a>
+                    </li>
+                    <li>
+                        <a id="nav-resources" href="https://codeclubprojects.org/en-GB/resources/">Resources</a>
+                    </li>
+                    <li>
+                        <a id="nav-contribute" href="https://codeclubprojects.org/en-GB/contribute/">Contribute</a>
+                    </li>
+
+                    <li><a id="footer-privacy" href="https://www.codeclub.org.uk/terms-and-conditions">Privacy &amp; Terms</a></li>
+                    <script type="text/javascript">
+                        var link = document.getElementById('footer-privacy');
+
+                        analytics.trackLink(link, 'Clicked Privacy & Terms in Nav');
+                    </script>
+                    <!-- <li><button class="btn btn-secondary" type="submit">English <span class="caret"></span></button></li> -->
+                </ul>
+                <script type="text/javascript">
+                    var link = document.getElementById('nav-courses');
+
+                    analytics.trackLink(link, 'Clicked Courses in Nav');
+                </script>
+                <script type="text/javascript">
+                    var link = document.getElementById('nav-curriculum');
+
+                    analytics.trackLink(link, 'Clicked Curriculum in Nav');
+                </script>
+                <script type="text/javascript">
+                    var link = document.getElementById('nav-resources');
+
+                    analytics.trackLink(link, 'Clicked Resources in Nav');
+                </script>
+                <script type="text/javascript">
+                    var link = document.getElementById('nav-contribute');
+
+                    analytics.trackLink(link, 'Clicked Contribute in Nav');
+                </script>
+                <!-- <ul class="list-inline text-center">
+
+                  <li><a href="/ar-EG/">العربية</a></li>
+
+                  <li><a href="/ca-ES/">Català</a></li>
+
+                  <li><a href="/de-DE/">Deutsch</a></li>
+
+                  <li><a href="/en-GB/">English</a></li>
+
+                  <li><a href="/es-ES/">Español</a></li>
+
+                  <li><a href="/fr-FR/">Français</a></li>
+
+                  <li><a href="/is-IS/">Íslenska</a></li>
+
+                  <li><a href="/it-IT/">Italiano</a></li>
+
+                  <li><a href="/nb-NO/">Norsk</a></li>
+
+                  <li><a href="/pl-PL/">Polski</a></li>
+
+                  <li><a href="/ru-RU/">русский язык</a></li>
+
+                  <li><a href="/sv-SE/">Svenska</a></li>
+
+                  <li><a href="/vi-VN/">Tiếng Việt</a></li>
+
+                </ul> -->
+            </div>
+            <div class="copyright center-block">
+                <p class="text-center">This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use.</p>
+                <p class="text-center">© 2012-2017 Raspberry Pi Foundation. UK Registered Charity 1129409</p>
+            </div>
+        </div>
+    </section>
+    <script src="./Turtle Race! – Code Club_files/jquery.min.js.download"></script>
+    <script>window.jQuery || document.write('<script src="/public/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/bootstrap.min.js.download"></script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/smooth-scroll.js.download"></script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/js.cookie.js.download"></script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/notice.js.download"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+
+        ga('create', 'UA-30750176-9', 'auto');
+
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        smoothScroll.init();
+    </script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/scratchblocks2.js.download"></script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/js.cookie.js.download"></script>
+    <script type="text/javascript" src="./Turtle Race! – Code Club_files/project.js.download"></script>
+
+
+    <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+</body>
+<span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>
+</html>

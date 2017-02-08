@@ -1,0 +1,8 @@
+$(document).ready(function($) {
+  // show ID & PIN notice if no cookie is present on courses page
+  if (Cookies.get('https://codeclubprojects.org') != undefined ) {
+    $('.cookie-notice').addClass('hide');
+  } else {
+    $('.cookie-notice').removeClass('hide');
+  }
+});
